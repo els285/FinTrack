@@ -7,8 +7,8 @@ The `Transaction` object is a wrapper for a Pandas dataframe which contains all 
 
 ```python
 from Trans import Transactions_FromCSV as From_CSV
-July   = From_CSV("./july_exported.csv")
-August = From_CSV("./august_exported.csv")
+july   = From_CSV("./july_exported.csv")
+august = From_CSV("./august_exported.csv")
 ```
 
 The `Transaction` wrappers can be combined such that the methods can be applied to larger sets of transactions than were (or can be) included in the CSV files
