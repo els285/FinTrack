@@ -92,7 +92,6 @@ def Random_Transaction_CSV(number_of_transactions,name):
     df.to_csv(name,index=False)
 
 
-Random_Transaction_CSV(100,"./rand_trans.csv")
 
 
 
