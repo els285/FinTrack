@@ -15,7 +15,7 @@ The `Transaction` wrappers can be combined such that the methods can be applied 
 
 ```python
 from Trans import Transactions_Combined as Combine
-combined_transactions = Combine(July,August)
+combined_transactions = Combine(july,august)
 ```
 
 Transactions are sorted by date.
