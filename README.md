@@ -6,16 +6,16 @@ For my own financial tracking
 The `Transaction` object is a wrapper for a Pandas dataframe which contains all the transactions contained in an input csv. Generalised functionality for slicing this dataframe to look at total expenditure, BACS transfers etc.
 
 ```python
-from Trans import Transactions_FromCSV as From_CSV
-july   = From_CSV("./july_exported.csv")
-august = From_CSV("./august_exported.csv")
+from Trans import Transactions_FromCSV as from_CSV
+July   = from_CSV("./july_exported.csv")
+August = from_CSV("./august_exported.csv")
 ```
 
 The `Transaction` wrappers can be combined such that the methods can be applied to larger sets of transactions than were (or can be) included in the CSV files
 
 ```python
-from Trans import Transactions_Combined as Combine
-combined_transactions = Combine(july,august)
+from Trans import Transactions_Combined as combine
+Combined_Transactions = combine(july,august)
 ```
 
 Transactions are sorted by date.
