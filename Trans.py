@@ -14,8 +14,11 @@ class Top:
         self.transfers_out = self.outgoings[self.outgoings["Transaction Type"]=="FPO"]
         self.transfers_in  = self.incomings[self.incomings["Transaction Type"]=="FPI"]
 
+    def display_all_notebook(self):
+        with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
+            display(t.df)
 
-    def show_all(self):
+    def display_all(self):
         with pd.option_context('display.max_rows', None):#::, 'display.max_columns', None):  # more options can be specified also
             print(self.df)
 
@@ -27,6 +30,10 @@ class Top:
 
     def total_expenditure(self):
         return self.expenditure["Debit Amount"].sum()
+
+    def search_by_description(self,description):
+        return self.df[self.df["Transaction description"].str.contains(description)]
+
 
 
 class Transactions_FromCSV(Top):
