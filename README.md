@@ -20,6 +20,12 @@ combined_transactions = Combine(july,august)
 
 Transactions are sorted by date.
 
+### Searching Data
+You can search by string in the transaction description:
+```python
+combined_transactions.search_by_description("BEER")
+```
+
 
 ## Generating Data
 
